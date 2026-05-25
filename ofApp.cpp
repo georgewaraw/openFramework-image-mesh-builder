@@ -2,6 +2,8 @@
 
 void ofApp::setup( ) {
 
+    ofSetBackgroundAuto( false );
+    ofBackground( 0 );
     ofSetFrameRate( frameRate );
 
     image.load( imageName );
@@ -55,7 +57,9 @@ void ofApp::setup( ) {
 
 void ofApp::draw( ) {
 
-    ofBackground( 0 );
+    ofSetColor( 0, 0, 0, motionBlurStrength );
+    ofDrawRectangle( 0, 0, screenWidth, screenHeight );
+    ofSetColor( 255 );
 
     for ( int i=0; i<vertexCount; ++i ) {
 
