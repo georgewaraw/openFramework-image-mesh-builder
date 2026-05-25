@@ -18,6 +18,12 @@ class ofApp : public ofBaseApp {
 
 		float vertexDisplacementScale = 2.5;
 		float timeScale = 10.0;
+
+		float cameraStartPosition = -1000.0;
+		float cameraEndPosition = 900.0;
+		float cameraSpeed = 1.0;
+
+		int motionBlurStrength = 127; // 0-255 | LOWER = STRONGER
 		// END CONFIG
 
 		int screenWidth = ofGetWidth();
@@ -29,10 +35,7 @@ class ofApp : public ofBaseApp {
 		vector<ofVec3f> timeOffsets;
 
 		ofEasyCam camera;
-		float cameraStartPosition = -1000.0;
-		float cameraEndPosition = 900.0;
 		float cameraPosition = cameraStartPosition;
-		float cameraSpeed = 1.0;
 		std::string cameraDirection = "towards";
 
 		void setup();
