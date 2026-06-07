@@ -8,6 +8,7 @@ void ofApp::setup( ) {
 
     image.load( imageName );
     image.resize( screenWidth*imageScale, screenHeight*imageScale );
+    image.mirror( true, false );
 
     mesh.setMode( OF_PRIMITIVE_LINES );
     mesh.enableIndices( );
